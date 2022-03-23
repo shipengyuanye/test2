@@ -1,0 +1,23 @@
+#include "stdio.h"
+#include "string.h"
+int main()
+{
+	char c[1000],b[99];
+	int count=0, a;
+	printf("输入英语句子：\n");
+	strlwr(gets(c));
+	printf("输入两个想数的连续字母：");
+	strlwr(gets(b));
+	for(a=0;a<1000;a++)
+	{
+		if(c[a]==b[0]&&c[a+1]==b[1])
+		{
+			count++;  
+		}	
+		
+	}
+	printf("%d\n",count);
+	
+	return 0;	
+	
+}
